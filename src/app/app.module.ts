@@ -7,18 +7,35 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddDonarComponent } from './add-donar/add-donar.component';
 import { SearchDonarComponent } from './search-donar/search-donar.component';
 import { DeleteDonarComponent } from './delete-donar/delete-donar.component';
+import { ViewAllDonarComponent } from './view-all-donar/view-all-donar.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes:Routes=[
+  {
+    path:"",component:AddDonarComponent
+  },{
+    path:"search",component:SearchDonarComponent
+  },
+  {
+    path:"delete",component:DeleteDonarComponent
+  },
+  {
+    path:"view-all-donar",component:ViewAllDonarComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AddDonarComponent,
     SearchDonarComponent,
-    DeleteDonarComponent
+    DeleteDonarComponent,
+    ViewAllDonarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
