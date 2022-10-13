@@ -9,6 +9,15 @@ export class SearchDonarComponent implements OnInit {
 
   constructor() { }
 
+  bloodGroup=""
+
+  readValues=()=>{
+    let data ={
+      "bloodGroup":this.bloodGroup
+    }
+    console.log(data)
+  }
+
   ngOnInit(): void {
   }
 
